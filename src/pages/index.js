@@ -16,7 +16,7 @@ export default function IndexPage() {
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="Anahata Technology Company" />
+          <SEO title="Anahata Consultancy Co., Ltd." />
           <Banner />
           <Services />
           <About/>

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button, Box } from 'theme-ui';
+import { jsx, Container, Flex, Button, Box,Heading } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { IoIosUnlock } from 'react-icons/io';
 import { NavLink, Link } from 'components/link';
@@ -16,7 +16,9 @@ export default function Header({ className }) {
       <header sx={styles.header} className={className}>
         <Container sx={styles.container}>
           <Logo />
-
+          <Heading as="h3" styles={{ color : "green"}}>
+          Anahata Consultancy
+          </Heading>
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
               <ScrollLink

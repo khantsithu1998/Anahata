@@ -23,7 +23,7 @@ export default function Footer() {
           <Logo />
           <Text as="p">
             &copy; {new Date().getFullYear()} All right reserved - Design &
-            Developed by Anahata, Inc
+            Developed by Anahata Consultancy
           </Text>
         </Box>
         {/* <Box sx={styles.right}>

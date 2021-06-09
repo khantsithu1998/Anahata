@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Box } from 'theme-ui';
+import { Button, Box, Heading } from 'theme-ui';
 import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { DrawerContext } from 'contexts/drawer/drawer.context';
@@ -9,7 +9,7 @@ import { Facebook, Twitter, Github, Dribbble } from 'components/customIcon';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import menuItems from './header.data';
 import Logo from 'components/logo';
-import LogoDark from 'assets/logo.svg';
+import LogoDark from 'assets/logo.png';
 
 const social = [
   {
@@ -57,6 +57,9 @@ const MobileDrawer = () => {
       <Scrollbars autoHide>
         <Box sx={styles.content}>
           <Logo src={LogoDark} />
+          <Heading as="h3">
+          Anahata Consultancy Co., Ltd.
+          </Heading>
           <Box sx={styles.menu}>
             {menuItems.map(({ path, label }, i) => (
               <ScrollLink
@@ -75,7 +78,7 @@ const MobileDrawer = () => {
 
           <Box sx={styles.menuFooter}>
             <Button variant="primary" sx={styles.button}>
-              Register Now
+              Contact Us
             </Button>
           </Box>
         </Box>

@@ -52,7 +52,7 @@ and so on. Our expertise lies in clearly perceiving the business goals of our cu
 choosing the most appropriate technologies and efficiently developing solutions catered to the
 business needs.
         </Text>
-        
+
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map((service, index) => (
             <Box
