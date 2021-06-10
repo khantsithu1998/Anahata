@@ -8,7 +8,6 @@ import icon2 from "assets/icons/service-1-2.svg";
 import icon3 from "assets/icons/service-1-3.svg";
 import icon4 from "assets/icons/service-1-4.svg";
 import icon5 from "assets/icons/service-1-5.svg";
-import WhatWeDo from "sections/what-we-do";
 
 const SERVICES_DATA = [
   {
@@ -67,7 +66,6 @@ business needs.
             </Box>
           ))}
         </Grid>
-        <WhatWeDo/>
       </Container>
     </Box>
   );
@@ -117,8 +115,8 @@ const styles = {
     display: "flex",
     ml: "auto",
     mr: "auto",
-    width: ["80px", null, null, "110px"],
-    height: ["80px", null, null, "110px"],
+    width: ["90px", null, null, "110px"],
+    height: ["90px", null, null, "110px"],
     justifyContent: "center",
     alignItems: "center",
     borderRadius: ["20px", null, null, "40px"],

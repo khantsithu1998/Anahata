@@ -84,7 +84,7 @@ export default WhatWeDo;
 
 const styles = {
   whatwedo: {
-    pt: ["70px", null, null, "80px", "120px", null, "130px"],
+    pt: ["70px", null, null, "80px", "120px", null, "60px"],
   },
   row: {
     display: "flex",

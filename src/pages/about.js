@@ -19,7 +19,6 @@ const About = () => {
           business. In fact, it is the long-term relationships with our clients
           that has served as a solid foundation for our company.
         </Text>
-        <br />
         <BlockTitle slogan="" title="Who We Are" styles={styles.blockTitle} />
         <Text as="p">
           Our software team is specialized in producing software to assist you
