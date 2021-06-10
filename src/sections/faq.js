@@ -1,5 +1,4 @@
-import { Box, Container, Grid, Heading, Text } from "theme-ui";
-import { IoIosCheckmarkCircle } from "react-icons/io";
+import { Box, Container, Heading, Text } from "theme-ui";
 
 const FAQ = () => {
   return (

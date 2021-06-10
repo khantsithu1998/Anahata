@@ -21,51 +21,51 @@ const WhatWeDo = () => {
               </Box>
               <Box as="ul" sx={styles.list}>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Software Development
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Embedded / IOT Solutions
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Web Application Development
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Mobile App Development
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Automated Testing
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Manual Testing
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Database Development
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Technology Consultancy
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Project planning and Management
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Product Maintenance
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   ECommerce Solutions
                 </Text>
                 <Text as="li">
-                  <IoIosCheckmarkCircle />
+                  <IoIosCheckmarkCircle color="#92E3A9"/>
                   Cyber Security Services
                 </Text>
               </Box>
