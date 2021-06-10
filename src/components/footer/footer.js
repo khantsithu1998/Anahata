@@ -46,7 +46,7 @@ const styles = {
     p: {
       fontSize: [0, 1],
       color: 'black',
-      opacity: 0.6,
+      opacity: 0.9,
       mt: ['10px', null, '0'],
     },
   },

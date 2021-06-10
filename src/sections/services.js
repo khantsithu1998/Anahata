@@ -90,7 +90,7 @@ const styles = {
       fontSize: ['15px', null, null, '17px'],
       lineHeight: ['26px', null, null, 2],
       mt: ['10px', null, null, null, '25px'],
-      mb: ['0px', null, null, null, '120px'],
+      mb: ['50px', null, null, null, '120px'],
     },
     br: {
       display: ['none', null, null, 'inherit'],

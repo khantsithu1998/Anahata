@@ -7,9 +7,11 @@ import Layout from 'components/layout';
 
 import Banner from 'sections/banner';
 import Services from 'sections/services';
+import About from 'sections/about'
 import WhatWeDo from 'sections/what-we-do';
+import FAQ from 'sections/faq';
 import ContactUs from 'sections/contact-us';
-import About from 'sections/about';
+
 
 export default function IndexPage() {
   return (
@@ -21,6 +23,7 @@ export default function IndexPage() {
           <Services />
           <About/>
           <WhatWeDo />
+          <FAQ/>
           {/* <Careers/> */}
           {/* <ContactUs/> */}
         </Layout>
