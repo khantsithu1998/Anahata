@@ -1,13 +1,11 @@
 import React from "react";
 import { Box, Container, Grid, Heading, Text } from "theme-ui";
 import BlockTitle from "components/block-title";
-import { IoIosCheckmarkCircle } from 'react-icons/io';
-
-import { FaAngleRight } from 'react-icons/fa';
+import WhatWeDo from "sections/what-we-do";
 
 const About = () => {
   return (
-    <Box sx={styles.about} id="about">
+    <Box sx={styles.about}>
       <Container>
         <BlockTitle slogan="" title="About Us" styles={styles.blockTitle} />
         <Text as="p">
@@ -21,7 +19,7 @@ const About = () => {
           business. In fact, it is the long-term relationships with our clients
           that has served as a solid foundation for our company.
         </Text>
-        <br/>
+        <br />
         <BlockTitle slogan="" title="Who We Are" styles={styles.blockTitle} />
         <Text as="p">
           Our software team is specialized in producing software to assist you
@@ -33,7 +31,7 @@ const About = () => {
           proven methodologies. It is rest assured that the software will be
           top-rated and most user-friendly.
         </Text>
-        
+        <WhatWeDo />
       </Container>
     </Box>
   );
@@ -43,7 +41,25 @@ export default About;
 
 const styles = {
   about: {
-    pt: ["70px", null, null, "80px", "120px", null, "130px"],
+    h3: {
+      margin: 0,
+      color: 'black',
+      fontSize: [5, null, null, '21px', '36px', '32px', 8],
+      letterSpacing: ['-0.5px', null, null, null, null, '-1.5px'],
+      fontWeight: 'bold',
+      lineHeight: [1.6, null, null, 1.25],
+      textAlign: "center",
+    },
+    p: {
+      fontSize: ['15px', null, null, '17px'],
+      lineHeight: ['26px', null, null, 2],
+      mt: ['10px', null, null, null, '25px'],
+      mb: ['50px', null, null, null, '120px'],
+    },
+    br: {
+      display: ['none', null, null, 'inherit'],
+    },
+    pt: ["130px", null, null, null, null, null, "120px"],
   },
   blockTitle: {
     textAlign: "center",

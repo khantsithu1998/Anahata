@@ -1,10 +1,11 @@
 import { Box, Container, Heading, Text } from "theme-ui";
+import BlockTitle from "components/block-title";
 
 const FAQ = () => {
   return (
-    <Box sx={styles.faq} id="faq">
+    <Box sx={styles.faq}>
       <Container>
-        <Heading as="h3"> FAQ</Heading>
+        <BlockTitle slogan="" title="FAQ" styles={styles.blockTitle} />
         <Heading as="h4"> ❖ Does this long-distance outsourcing work? </Heading>
         <Text as="p">
           Definitely, it works. We have been working on outsourced projects
@@ -65,7 +66,6 @@ export default FAQ;
 
 const styles = {
   faq: {
-    pt: ["80px", null, null, null, "150px", "100px"],
     h3: {
       margin: 0,
       pb: "40px",
@@ -78,7 +78,6 @@ const styles = {
     },
     h4: {
       margin: 0,
-      pt: "20px",
       lineHeight: [1.6, null, null, 1.25],
     },
     p: {
@@ -90,7 +89,7 @@ const styles = {
     br: {
       display: ["none", null, null, "inherit"],
     },
-    pt: ["80px", null, null, null, null, null, "140px"],
+    pt: ["130px", null, null, null, null, null, "120px"],
   },
   blockTitle: {
     textAlign: "center",

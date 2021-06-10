@@ -8,6 +8,7 @@ import icon2 from "assets/icons/service-1-2.svg";
 import icon3 from "assets/icons/service-1-3.svg";
 import icon4 from "assets/icons/service-1-4.svg";
 import icon5 from "assets/icons/service-1-5.svg";
+import WhatWeDo from "sections/what-we-do";
 
 const SERVICES_DATA = [
   {
@@ -39,11 +40,9 @@ const SERVICES_DATA = [
 
 const Services = () => {
   return (
-    <Box sx={styles.services} id="services">
+    <Box sx={styles.services}>
       <Container>
-      <Heading as="h3">
-          Services
-        </Heading>
+      <BlockTitle slogan="" title="Services" styles={styles.blockTitle} />
         <Text as="p">
         Anahata is a competent provider of any kind of software solutions including
 mission critical business applications, complex engineering software, data centric analytical
@@ -68,6 +67,7 @@ business needs.
             </Box>
           ))}
         </Grid>
+        <WhatWeDo/>
       </Container>
     </Box>
   );
@@ -95,7 +95,7 @@ const styles = {
     br: {
       display: ['none', null, null, 'inherit'],
     },
-    pt: ["80px", null, null, null, null, null, "140px"],
+    pt: ["130px", null, null, null, null, null, "120px"],
   },
   blockTitle: {
     textAlign: "center",

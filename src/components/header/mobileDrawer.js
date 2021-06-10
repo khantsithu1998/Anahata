@@ -6,7 +6,6 @@ import { DrawerContext } from 'contexts/drawer/drawer.context';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'components/link';
 import { Facebook, Twitter, Github, Dribbble } from 'components/customIcon';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import menuItems from './header.data';
 import Logo from 'components/logo';
 import LogoDark from 'assets/logo.png';
@@ -62,17 +61,12 @@ const MobileDrawer = () => {
           </Heading>
           <Box sx={styles.menu}>
             {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
+              <Link
                 activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={10}
-                duration={500}
-                key={i}
+                path={path}
               >
                 {label}
-              </ScrollLink>
+              </Link>
             ))}
           </Box>
 

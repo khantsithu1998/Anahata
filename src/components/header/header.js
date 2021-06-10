@@ -1,9 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Flex, Button, Box,Heading } from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import { IoIosUnlock } from 'react-icons/io';
 import { NavLink, Link } from 'components/link';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Logo from 'components/logo';
 
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
@@ -21,18 +18,13 @@ export default function Header({ className }) {
           </Heading>
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
+              <Link
                 activeClass="active"
                 sx={styles.nav.navLink}
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={i}
+                path={path}
               >
                 {label}
-              </ScrollLink>
+              </Link>
             ))}
           </Flex>
 
