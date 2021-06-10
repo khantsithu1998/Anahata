@@ -115,12 +115,10 @@ const styles = {
     display: "flex",
     ml: "auto",
     mr: "auto",
-    width: ["90px", null, null, "110px"],
-    height: ["90px", null, null, "110px"],
+    width: ["80px", null, null, "110px"],
+    height: ["80px", null, null, "110px"],
     justifyContent: "center",
-    alignItems: "center",
-    borderRadius: ["20px", null, null, "40px"],
-      
+    alignItems: "center",      
   },
   serviceCard: {
     textAlign: "center",
