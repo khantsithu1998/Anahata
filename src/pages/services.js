@@ -1,13 +1,13 @@
 import React from "react";
-import { Box, Container, Grid, Heading, Text } from "theme-ui";
+import { Box, Container, Grid, Heading, Text, Image } from "theme-ui";
 import BlockTitle from "components/block-title";
-import Image from "components/image";
 
 import icon1 from "assets/icons/service-1-1.svg";
 import icon2 from "assets/icons/service-1-2.svg";
 import icon3 from "assets/icons/service-1-3.svg";
 import icon4 from "assets/icons/service-1-4.svg";
 import icon5 from "assets/icons/service-1-5.svg";
+import image1 from "assets/services.svg";
 
 const SERVICES_DATA = [
   {
@@ -41,6 +41,7 @@ const Services = () => {
   return (
     <Box sx={styles.services}>
       <Container>
+        <Image src={image1}/>
       <BlockTitle slogan="" title="Services" styles={styles.blockTitle} />
         <Text as="p">
         Anahata is a competent provider of any kind of software solutions including
@@ -59,9 +60,6 @@ business needs.
               key={`service-post-${index}`}
             >
               <Image src={service.icon} alt=""/>
-              {/* <Box className="service-icon" sx={styles.icon}>
-                <Image src={service.icon} alt=""/>
-              </Box> */}
               <Heading as="h2">{service.title}</Heading>
               <Text as="p">{service.text}</Text>
             </Box>
@@ -111,18 +109,6 @@ const styles = {
       "1fr 1fr 1fr 1fr 1fr",
       
     ],
-  },
-  icon: {
-    display: "flex",
-    ml: "auto",
-    mr: "auto",
-    width: ["80px", null, null, "110px"],
-    height: ["80px", null, null, "110px"],
-    justifyContent: "center",
-    alignItems: "center", 
-    borderRadius: ["20px", null, null, "40px"],
-    backgroundImage:
-      "linear-gradient(323.91deg, #FFFFFF 7.09%, rgba(255, 255, 255, 0.5) 88.82%)",     
   },
   serviceCard: {
     textAlign: "center",

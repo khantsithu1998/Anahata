@@ -1,12 +1,14 @@
 import React from "react";
-import { Box, Container, Grid, Heading, Text } from "theme-ui";
+import { Box, Container,Image, Text } from "theme-ui";
 import BlockTitle from "components/block-title";
 import WhatWeDo from "sections/what-we-do";
+import image1 from "assets/about-us-2.svg";
 
 const About = () => {
   return (
     <Box sx={styles.about}>
       <Container>
+        <Image src={image1}/>
         <BlockTitle slogan="" title="About Us" styles={styles.blockTitle} />
         <Text as="p">
           Anahata is an emerging software firm in Myanmar producing world-class

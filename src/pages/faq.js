@@ -1,10 +1,12 @@
-import { Box, Container, Heading, Text } from "theme-ui";
+import { Box, Container, Heading, Text,Image } from "theme-ui";
 import BlockTitle from "components/block-title";
+import image1 from "assets/faq.svg";
 
 const FAQ = () => {
   return (
     <Box sx={styles.faq}>
       <Container>
+        <Image src={image1} />
         <BlockTitle slogan="" title="FAQ" styles={styles.blockTitle} />
         <Heading as="h4"> ❖ Does this long-distance outsourcing work? </Heading>
         <Text as="p">
@@ -93,47 +95,5 @@ const styles = {
   },
   blockTitle: {
     textAlign: "center",
-  },
-  grid: {
-    display: "grid",
-    gridGap: ["15px", null, null, null, null, "30px"],
-    gridTemplateColumns: [
-      "1fr",
-      null,
-      null,
-      "1fr 1fr",
-      null,
-      "1fr 1fr 1fr 1fr 1fr",
-    ],
-  },
-  icon: {
-    display: "flex",
-    ml: "auto",
-    mr: "auto",
-    width: ["80px", null, null, "110px"],
-    height: ["80px", null, null, "110px"],
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: ["20px", null, null, "40px"],
-  },
-  serviceCard: {
-    textAlign: "center",
-    h3: {
-      margin: 0,
-      fontSize: ["18px", null, null, 3],
-      fontWeight: "bold",
-      lineHeight: 1,
-      color: "black",
-      mt: ["30px", null, null],
-      mb: ["20px", null, null],
-    },
-    p: {
-      margin: 0,
-      fontSize: [0, null, null, "15px"],
-      color: "heading_secondary",
-      width: "100%",
-      maxWidth: [null, null, null, null, "84%", "100%"],
-      mx: [null, null, null, null, "auto", "0"],
-    },
   },
 };
