@@ -7,6 +7,7 @@ const HomeLayout = ({ childern }) => {
     <div>
       <SEO title="Anahata Consultancy Co., Ltd." />
       {childern}
+      
     </div>
   );
 };

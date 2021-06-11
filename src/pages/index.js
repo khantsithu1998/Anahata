@@ -10,7 +10,7 @@ import { Link } from "components/link";
 
 const IndexPage = () => {
   return (
-    <Box sx={styles.banner} id="banner">
+    <Box sx={styles.banner}>
       <Container sx={styles.container}>
         <Grid sx={styles.grid}>
           <Box sx={styles.content}>
@@ -106,12 +106,12 @@ const styles = {
   image: {
     img: {
       mt: ["25px", null, null, "0"],
-    display: "flex",
-    marginLeft: ["0", null, null, null, "auto"],
-    marginRight: ["0", null, null, null, "auto"],
-    height: ["385px", null, null, "auto"],
-    position: "relative",
-    top: [null, null, null, "-20px", "-45px", "auto"],
+      display: "flex",
+      marginLeft: ["0", null, null, null, "auto"],
+      marginRight: ["0", null, null, null, "auto"],
+      height: ["385px", null, null, "auto"],
+      position: "relative",
+      top: [null, null, null, "-20px", "-45px", "auto"],
     },
   },
   row: {
@@ -123,7 +123,7 @@ const styles = {
     flex: ["0 0 100%", null, null, "0 0 50%"],
   },
   secondbanner: {
-    pt: ["70px", null, null, "80px", "60px", null, "60px"],
+    pt: ["30px", "30px", "30px", "40px", "40px"],
     image: {
       mt: ["25px", null, null, "0"],
       display: "flex",
@@ -139,10 +139,9 @@ const styles = {
     textAlign: ["left", null, null, null, "left"],
     pt: [null, null, null, null, null, "100px"],
     pl: [null, null, null, null, null, "60px", "140px"],
-    marginLeft: 60,
   },
   titleBox: {
-    textAlign: ["center", null, null, "left"],
+    textAlign: ["center", "center", null, null, null],
     h3: {
       color: "black",
       fontSize: [5, null, null, "21px", "36px", "32px", 8],
@@ -159,7 +158,7 @@ const styles = {
       padding: ["0 20px", null, null, "0"],
       mt: ["15px"],
       textAlign: "left",
-      marginLeft: [null, null, null, null, null, "60px", "60px"],
+      marginLeft: [null, null, null, "30px", "60px"],
     },
     learn_more: {
       color: "primary",
@@ -173,7 +172,7 @@ const styles = {
         position: "relative",
         top: "3px",
       },
-      float : [null,null,null,null,null,"right","right"]
+      float: ["center", null, null, "right", "right"],
     },
   },
 };
