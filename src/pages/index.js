@@ -147,7 +147,7 @@ const styles = {
       lineHeight: [1.6, null, null, "1.5"],
       fontWeight: "bold",
       letterSpacing: ["-0.5px", null, null, null, null, null, "-1.5px"],
-      textAlign: ["center", null, null, null, null, null, "center"],
+      textAlign: "center",
     },
     p: {
       fontSize: [0, null, 2, null, "17px"],
@@ -156,7 +156,7 @@ const styles = {
       lineHeight: ["26px", null, null, 1.8, null, 2.06],
       padding: ["0 20px", null, null, "0"],
       mt: ["15px"],
-      marginLeft: ["center", null, null, null, null, "60px", "60px"],
+      marginLeft: [null, null, null, null, null, "60px", "60px"],
     },
     learn_more: {
       color: "primary",
