@@ -59,7 +59,7 @@ business needs.
               key={`service-post-${index}`}
             >
               <Box className="service-icon" sx={styles.icon}>
-                <Image src={service.icon} alt="" />
+                <Image src={service.icon} alt=""/>
               </Box>
               <Heading as="h2">{service.title}</Heading>
               <Text as="p">{service.text}</Text>
@@ -118,7 +118,10 @@ const styles = {
     width: ["80px", null, null, "110px"],
     height: ["80px", null, null, "110px"],
     justifyContent: "center",
-    alignItems: "center",      
+    alignItems: "center", 
+    borderRadius: ["20px", null, null, "40px"],
+    backgroundImage:
+      "linear-gradient(323.91deg, #FFFFFF 7.09%, rgba(255, 255, 255, 0.5) 88.82%)",     
   },
   serviceCard: {
     textAlign: "center",

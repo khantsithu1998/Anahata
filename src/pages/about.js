@@ -19,17 +19,6 @@ const About = () => {
           business. In fact, it is the long-term relationships with our clients
           that has served as a solid foundation for our company.
         </Text>
-        <BlockTitle slogan="" title="Who We Are" styles={styles.blockTitle} />
-        <Text as="p">
-          Our software team is specialized in producing software to assist you
-          to oper- ate your entire industry smoothly. Our development team
-          consists of experienced and qualified system analysts, application
-          developers, solution developers, database administrators, program-
-          mers, Security Researchers, Pentesters and testers. In each step of
-          development, we use creative ideas, cutting-edge technologies and
-          proven methodologies. It is rest assured that the software will be
-          top-rated and most user-friendly.
-        </Text>
         <WhatWeDo />
       </Container>
     </Box>
@@ -53,7 +42,7 @@ const styles = {
       fontSize: ['15px', null, null, '17px'],
       lineHeight: ['26px', null, null, 2],
       mt: ['10px', null, null, null, '25px'],
-      mb: ['50px', null, null, null, '120px'],
+      mb: ['50px', null, null, null, '90px'],
     },
     br: {
       display: ['none', null, null, 'inherit'],
@@ -62,29 +51,5 @@ const styles = {
   },
   blockTitle: {
     textAlign: "center",
-  },
-  grid: {
-    display: "grid",
-    gridGap: ["15px", null, null, null, null, "30px"],
-    gridTemplateColumns: [
-      "1fr",
-      null,
-      null,
-      "1fr 1fr",
-      null,
-      "1fr 1fr 1fr 1fr 1fr",
-    ],
-  },
-  icon: {
-    display: "flex",
-    ml: "auto",
-    mr: "auto",
-    width: ["80px", null, null, "110px"],
-    height: ["80px", null, null, "110px"],
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: ["20px", null, null, "40px"],
-    backgroundImage:
-      "linear-gradient(323.91deg, #FFCC40 7.09%, rgba(255, 204, 64, 0.5) 88.82%)",
   },
 };

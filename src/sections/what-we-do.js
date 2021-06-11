@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Container, Flex, Heading, Text } from "theme-ui";
 import Image from "components/image";
-import { Link } from "components/link";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import image1 from "assets/whatwedo.svg";
 
@@ -14,10 +13,6 @@ const WhatWeDo = () => {
             <Box sx={styles.content}>
               <Box sx={styles.titleBox}>
                 <Heading as="h3">What We Do</Heading>
-                {/* <Text as="p">
-                  Create custom landing pages with Shades that convert more
-                  visitors than any website, no coding required.
-                </Text> */}
               </Box>
               <Box as="ul" sx={styles.list}>
                 <Text as="li">
@@ -84,7 +79,7 @@ export default WhatWeDo;
 
 const styles = {
   whatwedo: {
-    pt: ["70px", null, null, "80px", "120px", null, "60px"],
+    // pt: ["50px", null, null, "50px", "60px", null, "90px"],
   },
   row: {
     display: "flex",
@@ -144,24 +139,11 @@ const styles = {
       mt: ["15px"],
     },
   },
-  link: {
-    color: "primary",
-    fontSize: [1, null, 2],
-    display: "inline-block",
-    verticalAlign: "middle",
-    fontWeight: "bold",
-    pl: ["30px", null, null, "4px", null, "4px"],
-    mt: ["5px", null, null, null, "10px"],
-    svg: {
-      position: "relative",
-      top: "3px",
-    },
-  },
   content: {
     width: "100%",
-    textAlign: ["left", null, null, null, "left"],
-    pt: [null, null, null, null, null, "100px"],
-    pl: [null, null, null, null, null, "60px", "140px"],
-    marginLeft : 60
+    textAlign: ["center", null, "center", null, "left"],
+    // pt: [null, null, null, null, null, "100px"],
+    // // pl: [null, null, null, null, null, "60px", "140px"],
+    marginLeft: [null, null, null, null, null, "70px", "70px"],
   },
 };
