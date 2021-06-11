@@ -53,7 +53,7 @@ const IndexPage = () => {
               </Box>
             </Flex>
             <Flex sx={styles.col}>
-              <Image src={image1} sx={styles.image} alt="" />
+              <Image src={image1} styles={styles.image} alt="" />
             </Flex>
           </Box>
         </Container>
@@ -105,11 +105,13 @@ const styles = {
 
   image: {
     img: {
-      display: "flex",
-      mixBlendMode: "darken",
-      position: "relative",
-      top: ["0", null, null, null, null, "-40px"],
-      maxWidth: ["100%", null, null, null, null, null, "none"],
+      mt: ["25px", null, null, "0"],
+    display: "flex",
+    marginLeft: ["0", null, null, null, "auto"],
+    marginRight: ["0", null, null, null, "auto"],
+    height: ["385px", null, null, "auto"],
+    position: "relative",
+    top: [null, null, null, "-20px", "-45px", "auto"],
     },
   },
   row: {
@@ -156,6 +158,7 @@ const styles = {
       lineHeight: ["26px", null, null, 1.8, null, 2.06],
       padding: ["0 20px", null, null, "0"],
       mt: ["15px"],
+      textAlign: "left",
       marginLeft: [null, null, null, null, null, "60px", "60px"],
     },
     learn_more: {
