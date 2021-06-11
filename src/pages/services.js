@@ -58,9 +58,10 @@ business needs.
               sx={styles.serviceCard}
               key={`service-post-${index}`}
             >
-              <Box className="service-icon" sx={styles.icon}>
+              <Image src={service.icon} alt=""/>
+              {/* <Box className="service-icon" sx={styles.icon}>
                 <Image src={service.icon} alt=""/>
-              </Box>
+              </Box> */}
               <Heading as="h2">{service.title}</Heading>
               <Text as="p">{service.text}</Text>
             </Box>

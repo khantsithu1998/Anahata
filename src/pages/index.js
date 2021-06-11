@@ -42,7 +42,7 @@ const IndexPage = () => {
         <Container>
           <Box sx={styles.row}>
             <Flex sx={styles.col}>
-              <Box sx={styles.content}>
+              <Box sx={styles.content1}>
                 <Box sx={styles.titleBox}>
                   <Heading as="h3">Who We Are</Heading>
                   <Text as="p">
@@ -135,7 +135,7 @@ const styles = {
       position: "relative",
       top: [null, null, null, "-20px", "-45px", "auto"],
     },
-    content: {
+    content1: {
       width: "100%",
       textAlign: ["left", null, null, null, "left"],
       pt: [null, null, null, null, null, "100px"],
@@ -182,7 +182,6 @@ const styles = {
         position: 'relative',
         top: '3px',
       },
-      textAlign: "center",
     },
   },
 };
