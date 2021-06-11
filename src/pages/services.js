@@ -87,12 +87,12 @@ const styles = {
       textAlign: "center",
     },
     p: {
-      color:"#FFFFFF",
       fontSize: ["15px", null, null, "17px"],
       lineHeight: ["26px", null, null, 2],
       mt: ["10px", null, null, null, "25px"],
       mb: ["50px", null, null, null, "120px"],
     },
+    
     br: {
       display: ["none", null, null, "inherit"],
     },
@@ -127,7 +127,7 @@ const styles = {
     p: {
       margin: 0,
       fontSize: [0, null, null, "15px"],
-      color: "heading_secondary",
+      color: "#FFFFFF",
       width: "100%",
       maxWidth: [null, null, null, null, "84%", "100%"],
       mx: [null, null, null, null, "auto", "0"],
