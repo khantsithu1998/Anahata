@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Button,
-  Input,
-  Heading,
-  Text,
-  Flex,
-} from "theme-ui";
+import { Box, Container, Grid, Heading, Text, Flex } from "theme-ui";
 
 import Image from "components/image";
 
@@ -16,7 +7,6 @@ import bannerImg from "assets/development-banner.svg";
 import image1 from "assets/company.svg";
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from "components/link";
-
 
 const IndexPage = () => {
   return (
@@ -42,7 +32,7 @@ const IndexPage = () => {
         <Container>
           <Box sx={styles.row}>
             <Flex sx={styles.col}>
-              <Box sx={styles.content1}>
+              <Box sx={styles.content_more}>
                 <Box sx={styles.titleBox}>
                   <Heading as="h3">Who We Are</Heading>
                   <Text as="p">
@@ -56,16 +46,14 @@ const IndexPage = () => {
                     technologies and proven methodologies. It is rest assured
                     that the software will be top-rated and most user-friendly.
                   </Text>
-                  <Link path="/about" sx={{
-                    marginLeft : "60px"
-                  }}>
-                    Learn More <FaAngleRight/>
+                  <Link path="/about" as="learn_more">
+                    Learn More <FaAngleRight />
                   </Link>
                 </Box>
               </Box>
             </Flex>
             <Flex sx={styles.col}>
-              <Image src={image1} sx={styles.image1} alt="" />
+              <Image src={image1} sx={styles.image} alt="" />
             </Flex>
           </Box>
         </Container>
@@ -124,9 +112,17 @@ const styles = {
       maxWidth: ["100%", null, null, null, null, null, "none"],
     },
   },
+  row: {
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: ["column", null, null, "row-reverse"],
+  },
+  col: {
+    flex: ["0 0 100%", null, null, "0 0 50%"],
+  },
   secondbanner: {
     pt: ["70px", null, null, "80px", "60px", null, "60px"],
-    image1: {
+    image: {
       mt: ["25px", null, null, "0"],
       display: "flex",
       marginLeft: ["0", null, null, null, "auto"],
@@ -135,21 +131,13 @@ const styles = {
       position: "relative",
       top: [null, null, null, "-20px", "-45px", "auto"],
     },
-    content1: {
-      width: "100%",
-      textAlign: ["left", null, null, null, "left"],
-      pt: [null, null, null, null, null, "100px"],
-      pl: [null, null, null, null, null, "60px", "140px"],
-      marginLeft: 60,
-    },
   },
-  row: {
-    display: "flex",
-    flexWrap: "wrap",
-    flexDirection: ["column", null, null, "row-reverse"],
-  },
-  col: {
-    flex: ["0 0 100%", null, null, "0 0 50%"],
+  content_more: {
+    width: "100%",
+    textAlign: ["left", null, null, null, "left"],
+    pt: [null, null, null, null, null, "100px"],
+    pl: [null, null, null, null, null, "60px", "140px"],
+    marginLeft: 60,
   },
   titleBox: {
     textAlign: ["center", null, null, "left"],
@@ -170,18 +158,19 @@ const styles = {
       mt: ["15px"],
       marginLeft: ["center", null, null, null, null, "60px", "60px"],
     },
-    link: {
-      color: 'primary',
+    learn_more: {
+      color: "primary",
       fontSize: [1, null, 2],
-      display: 'inline-block',
-      verticalAlign: 'middle',
-      fontWeight: 'bold',
-      pl: ['30px', null, null, '4px', null, '4px'],
-      mt: ['5px', null, null, null, '10px'],
+      display: "inline-block",
+      verticalAlign: "middle",
+      fontWeight: "bold",
+      pl: ["30px", null, null, "4px", null, "4px"],
+      mt: ["5px", null, null, null, "10px"],
       svg: {
-        position: 'relative',
-        top: '3px',
+        position: "relative",
+        top: "3px",
       },
+      float : [null,null,null,null,null,"right","right"]
     },
   },
 };

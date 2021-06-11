@@ -22,16 +22,15 @@ export default function Footer() {
         <Box sx={styles.left}>
           <Logo />
           <Text as="p">
-            &copy; {new Date().getFullYear()} All right reserved - Design &
-            Developed by Anahata Consultancy
+            &copy; {new Date().getFullYear()} Anahata Consultancy.All right reserved
           </Text>
         </Box>
         {/* <Box sx={styles.right}>
-          <Link path="/" label="Home" />
-          <Link path="/" label="Adversite" />
-          <Link path="/" label="Supports" />
-          <Link path="/" label="Marketing" />
-          <Link path="/" label="FAQ" />
+          <Link path="/" label="Software Development" />
+          <Link path="/" label="Database Development" />
+          <Link path="/" label="Software Testing" />
+          <Link path="/" label="Mobile App Development" />
+          <Link path="/" label="Technology Consultancy" />
         </Box> */}
       </Container>
     </footer>
@@ -52,7 +51,7 @@ const styles = {
   },
   right: {
     display: ['none', null, null, null, 'flex'],
-    fontSize: 2,
+    fontSize: 1,
     alignItems: 'center',
     color: 'black',
     a: {
