@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Container, Grid, Heading, Text, Image, Button } from "theme-ui";
-import BlockTitle from "components/block-title";
 
 import icon1 from "assets/icons/service-1-1.svg";
 import icon2 from "assets/icons/service-1-2.svg";
@@ -42,18 +41,29 @@ const Services = () => {
   return (
     <Box sx={styles.services}>
       <Container>
-        <Image src={image1} />
-        <BlockTitle slogan="" title="Services" styles={styles.blockTitle} />
-        <Text as="p">
-          Anahata is a competent provider of any kind of software solutions
-          including mission critical business applications, complex engineering
-          software, data centric analytical software, smart device solutions,
-          web solutions, eCommerce solutions, Cyber Security solutions and so
-          on. Our expertise lies in clearly perceiving the business goals of our
-          customers, choosing the most appropriate technologies and efficiently
-          developing solutions catered to the business needs.
-        </Text>
-
+        <Grid sx={styles.banner_grid}>
+          <Box sx={styles.image}>
+            <Image src={image1} />
+          </Box>
+          <Box sx={styles.content}>
+            <Box sx={styles.titleBox}>
+              <Heading as="h3">Anahata</Heading>
+              <Text as="p">
+                Anahata is a competent provider of any kind of software
+                solutions including mission critical business applications,
+                complex engineering software, data centric analytical software,
+                smart device solutions, web solutions, eCommerce solutions,
+                Cyber Security solutions and so on. Our expertise lies in
+                clearly perceiving the business goals of our customers, choosing
+                the most appropriate technologies and efficiently developing
+                solutions catered to the business needs.
+              </Text>
+            </Box>
+          </Box>
+        </Grid>
+        <Box sx={styles.head}>
+          <Heading as="h3">Our Services</Heading>
+        </Box>
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map((service, index) => (
             <Box
@@ -63,8 +73,12 @@ const Services = () => {
             >
               <Image src={service.icon} alt="" />
               {/* <Heading as="h3">{service.title}</Heading> */}
-              <Link sx={styles.links} path="/services">{service.title}</Link>
-              <Button as="p" variant="primary">Read More</Button>
+              <Link sx={styles.links} path="/services">
+                {service.title}
+              </Link>
+              <Button as="p" variant="primary">
+                Read More
+              </Button>
             </Box>
           ))}
         </Grid>
@@ -92,14 +106,50 @@ const styles = {
       mt: ["10px", null, null, null, "25px"],
       mb: ["50px", null, null, null, "120px"],
     },
-    
+
     br: {
       display: ["none", null, null, "inherit"],
     },
     pt: ["130px", null, null, null, null, null, "120px"],
   },
-  blockTitle: {
-    textAlign: "center",
+  image: {
+    img: {
+      mt: ["25px", null, null, "0"],
+      display: "flex",
+      marginLeft: ["0", null, null, null, "auto"],
+      marginRight: ["0", null, null, null, "auto"],
+      height: ["385px", null, null, "auto"],
+      position: "relative",
+      top: [null, null, null, "-20px", "-45px", "auto"],
+    },
+  },
+  banner_grid: {
+    display: "grid",
+    gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],
+    gridGap: "0",
+    pt: ["20px", "40px", "40px", "50px"],
+  },
+  titleBox: {
+    textAlign: ["center", "center", null, null, null],
+    h3: {
+      color: "black",
+      fontSize: [5, null, null, "21px", "36px", "32px", 8],
+      lineHeight: [1.6, null, null, "1.5"],
+      fontWeight: "bold",
+      letterSpacing: ["-0.5px", null, null, null, null, null, "-1.5px"],
+      textAlign: "center",
+    },
+    p: {
+      fontSize: [0, null, 2, null, "17px"],
+      color: "text_secondary",
+      opacity: ".6",
+      lineHeight: ["26px", null, null, 1.8, null, 2.06],
+      padding: ["0 20px", null, null, "0"],
+      mt: ["15px"],
+      textAlign: "left",
+      marginLeft: [null, null, null, "30px", "60px"],
+    },
+    pt: ["10px", "40px", "40px", "60px"],
   },
   grid: {
     display: "grid",
@@ -112,6 +162,11 @@ const styles = {
       null,
       "1fr 1fr 1fr 1fr 1fr",
     ],
+    mt: ["40px", "40px", "40px", "60px"],
+  },
+  head: {
+    mt: "20px",
+    mb: "20px",
   },
   serviceCard: {
     textAlign: "center",
@@ -131,9 +186,7 @@ const styles = {
       width: "100%",
       maxWidth: [null, null, null, null, "84%", "100%"],
       mx: [null, null, null, null, "auto", "0"],
+      mt: ["20px", "20px", "20px", "20px"],
     },
-    // links: {
-    //   backgroundColor : "primary"
-    // }
   },
 };

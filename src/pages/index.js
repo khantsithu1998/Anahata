@@ -114,6 +114,10 @@ const styles = {
       top: [null, null, null, "-20px", "-45px", "auto"],
     },
   },
+  secondbanner: {
+    pt: ["30px", "30px", "30px", "40px", "40px"],
+   
+  },
   row: {
     display: "flex",
     flexWrap: "wrap",
@@ -121,18 +125,6 @@ const styles = {
   },
   col: {
     flex: ["0 0 100%", null, null, "0 0 50%"],
-  },
-  secondbanner: {
-    pt: ["30px", "30px", "30px", "40px", "40px"],
-    image: {
-      mt: ["25px", null, null, "0"],
-      display: "flex",
-      marginLeft: ["0", null, null, null, "auto"],
-      marginRight: ["0", null, null, null, "auto"],
-      height: ["385px", null, null, "auto"],
-      position: "relative",
-      top: [null, null, null, "-20px", "-45px", "auto"],
-    },
   },
   content_more: {
     width: "100%",
