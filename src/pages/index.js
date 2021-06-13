@@ -30,32 +30,30 @@ const IndexPage = () => {
       </Container>
       <Box sx={styles.secondbanner}>
         <Container>
-          <Box sx={styles.row}>
-            <Flex sx={styles.col}>
-              <Box sx={styles.content_more}>
-                <Box sx={styles.titleBox}>
-                  <Heading as="h3">Who We Are</Heading>
-                  <Text as="p">
-                    Our software team is specialized in producing software to
-                    assist you to oper- ate your entire industry smoothly. Our
-                    development team consists of experienced and qualified
-                    system analysts, application developers, solution
-                    developers, database administrators, programmers, Security
-                    Researchers, Pentesters and testers. In each step of
-                    development, we use creative ideas, cutting-edge
-                    technologies and proven methodologies. It is rest assured
-                    that the software will be top-rated and most user-friendly.
-                  </Text>
-                  <Link path="/about" as="learn_more">
-                    Learn More <FaAngleRight />
-                  </Link>
-                </Box>
+          <Grid sx={styles.second_grid}>
+            <Box styles={styles.image}>
+              <Image src={image1} alt="" />
+            </Box>
+            <Box sx={styles.content_more}>
+              <Box sx={styles.titleBox}>
+                <Heading as="h3">Who We Are</Heading>
+                <Text as="p">
+                  Our software team is specialized in producing software to
+                  assist you to oper- ate your entire industry smoothly. Our
+                  development team consists of experienced and qualified system
+                  analysts, application developers, solution developers,
+                  database administrators, programmers, Security Researchers,
+                  Pentesters and testers. In each step of development, we use
+                  creative ideas, cutting-edge technologies and proven
+                  methodologies. It is rest assured that the software will be
+                  top-rated and most user-friendly.
+                </Text>
+                <Link path="/about" as="learn_more">
+                  Learn More <FaAngleRight />
+                </Link>
               </Box>
-            </Flex>
-            <Flex sx={styles.col}>
-              <Image src={image1} styles={styles.image} alt="" />
-            </Flex>
-          </Box>
+            </Box>
+          </Grid>
         </Container>
       </Box>
     </Box>
@@ -115,16 +113,12 @@ const styles = {
     },
   },
   secondbanner: {
-    pt: ["30px", "30px", "30px", "40px", "40px"],
-   
+    pt: ["30px", null, null, "40px", "40px"],
   },
-  row: {
-    display: "flex",
-    flexWrap: "wrap",
-    flexDirection: ["column", null, null, "row-reverse"],
-  },
-  col: {
-    flex: ["0 0 100%", null, null, "0 0 50%"],
+  second_grid: {
+    display: "grid",
+    gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],
+    gridGap: "0",
   },
   content_more: {
     width: "100%",
