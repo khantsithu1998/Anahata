@@ -126,12 +126,31 @@ const SERVICES_DETAILS_DATA = [
   },
 ];
 
-const Details = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  const content = SERVICES_DETAILS_DATA.filter(
+
+export async function getStaticPaths() {
+  const paths = SERVICES_DETAILS_DATA.map(item => {
+    return {
+       params: {id: item.id.toString()}
+    }
+  })
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps(context) {
+  const id = context.params.id;
+  const data = SERVICES_DETAILS_DATA.filter(
     (item) => item.id == parseInt(id)
   )[0];
+  
+  return {
+    props: data
+  }
+}
+
+const Details = (content) => {
 
   return (
     <Box sx={styles.services_post_details}>
@@ -141,12 +160,12 @@ const Details = () => {
             <Heading as="h3">{content.title}</Heading>
             <Text as="p">{content.body}</Text>
             <Box as="ul" sx={styles.list}>
-              {content.list.map((item) => (
+              {/* {content.list.map((item) => (
                 <Text as="li">
                   <IoIosCheckmarkCircle color="#92E3A9" />
                   {item}
                 </Text>
-              ))}
+              ))} */}
             </Box>
           </Box>
           <Box>
