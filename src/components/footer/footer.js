@@ -1,7 +1,5 @@
 /** @jsx jsx */
 import { jsx, Box, Text, Container } from 'theme-ui';
-import { Link } from 'components/link';
-import Logo from 'components/logo';
 
 export default function Footer() {
   return (
@@ -21,7 +19,7 @@ export default function Footer() {
         }}
       >
         <Box sx={styles.center}>
-          <Logo />
+          
           <Text as="p">
             &copy; {new Date().getFullYear()} Anahata Consultancy Co.,Ltd.All right reserved
           </Text>

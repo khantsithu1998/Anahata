@@ -59,7 +59,7 @@ const styles = {
     br: {
       display: ["none", null, null, "inherit"],
     },
-    pt: ["130px", null, null, null, null, null, "120px"],
+    pt: ["110px", null, null, null, "150px", "200px"],
   },
   banner_grid: {
     display: "grid",

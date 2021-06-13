@@ -60,10 +60,11 @@ const MobileDrawer = () => {
           Anahata Consultancy Co., Ltd.
           </Heading>
           <Box sx={styles.menu}>
-            {menuItems.map(({ path, label }, i) => (
+            {menuItems.map(({ id , path, label }, i) => (
               <Link
                 activeClass="active"
                 path={path}
+                key={id}
               >
                 {label}
               </Link>

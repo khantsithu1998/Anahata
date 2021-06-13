@@ -8,29 +8,35 @@ import icon4 from "assets/icons/service-1-4.svg";
 import icon5 from "assets/icons/service-1-5.svg";
 import image1 from "assets/services.svg";
 import { Link } from "components/link";
+import { useRouter } from "next/router";
 
 const SERVICES_DATA = [
   {
+    id : 1,
     icon: icon1,
     title: "Software Development",
     text: "",
   },
   {
+    id : 2,
     icon: icon2,
     title: "Database Development",
     text: "",
   },
   {
+    id : 3,
     icon: icon3,
     title: "Software Testing",
     text: "",
   },
   {
+    id : 4,
     icon: icon4,
     title: "Mobile App Development",
     text: "",
   },
   {
+    id : 5,
     icon: icon5,
     title: "Technology Consultancy",
     text: "",
@@ -38,6 +44,7 @@ const SERVICES_DATA = [
 ];
 
 const Services = () => {
+  const router = useRouter()
   return (
     <Box sx={styles.services}>
       <Container>
@@ -73,10 +80,10 @@ const Services = () => {
             >
               <Image src={service.icon} alt="" />
               {/* <Heading as="h3">{service.title}</Heading> */}
-              <Link sx={styles.links} path="/services">
+              <Link sx={styles.links} path={"/services/" + service.id} key={service.key}>
                 {service.title}
               </Link>
-              <Button as="p" variant="primary">
+              <Button onClick={() => router.push("/services/"+service.id)} as="p" variant="primary">
                 Read More
               </Button>
             </Box>
@@ -110,7 +117,7 @@ const styles = {
     br: {
       display: ["none", null, null, "inherit"],
     },
-    pt: ["130px", null, null, null, null, null, "120px"],
+    pt: ["110px", null, null, null, "150px", "200px"],
   },
   image: {
     img: {

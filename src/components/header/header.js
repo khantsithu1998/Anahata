@@ -17,11 +17,12 @@ export default function Header({ className }) {
           Anahata Consultancy
           </Heading>
           <Flex as="nav" sx={styles.nav}>
-            {menuItems.map(({ path, label }, i) => (
+            {menuItems.map(({ id , path, label }, i) => (
               <Link
                 activeClass="active"
                 sx={styles.nav.navLink}
                 path={path}
+                key={id}
               >
                 {label}
               </Link>
@@ -34,6 +35,7 @@ export default function Header({ className }) {
             label="Contact Us"
             sx={styles.headerBtn}
             variant="buttons.primary"
+            
           />
 
           <MobileDrawer />
