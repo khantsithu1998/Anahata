@@ -144,7 +144,7 @@ export async function getStaticProps(context) {
   const data = SERVICES_DETAILS_DATA.filter(
     (item) => item.id == parseInt(id)
   )[0];
-  
+
   return {
     props: data
   }
@@ -160,12 +160,12 @@ const Details = (content) => {
             <Heading as="h3">{content.title}</Heading>
             <Text as="p">{content.body}</Text>
             <Box as="ul" sx={styles.list}>
-              {/* {content.list.map((item) => (
+              {content.list.map((item) => (
                 <Text as="li">
                   <IoIosCheckmarkCircle color="#92E3A9" />
                   {item}
                 </Text>
-              ))} */}
+              ))}
             </Box>
           </Box>
           <Box>
@@ -248,7 +248,7 @@ const styles = {
     },
   },
   service_list: {
-    ml: ["60px", null, null, "100px"],
+    ml: [null, null, null, "100px"],
     mt: ["60px", null, null, "100px"],
     li: {
       display: "flex",
