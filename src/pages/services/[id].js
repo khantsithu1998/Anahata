@@ -126,17 +126,16 @@ const SERVICES_DETAILS_DATA = [
   },
 ];
 
-
 export async function getStaticPaths() {
-  const paths = SERVICES_DETAILS_DATA.map(item => {
+  const paths = SERVICES_DETAILS_DATA.map((item) => {
     return {
-       params: {id: item.id.toString()}
-    }
-  })
+      params: { id: item.id.toString() },
+    };
+  });
   return {
     paths,
     fallback: false,
-  }
+  };
 }
 
 export async function getStaticProps(context) {
@@ -146,12 +145,12 @@ export async function getStaticProps(context) {
   )[0];
 
   return {
-    props: data
-  }
+    props: data,
+  };
 }
 
 const Details = (content) => {
-
+  const router = useRouter()
   return (
     <Box sx={styles.services_post_details}>
       <Container>
@@ -172,6 +171,7 @@ const Details = (content) => {
             <Box as="ul" sx={styles.service_list}>
               {SERVICES_DETAILS_DATA.map((service) => (
                 <Text
+                  onClick={() => router.push("/services/" + service.id)}
                   as="li"
                   key={service.id}
                   color={content.id == service.id ? "#FFFFFF" : "#000000"}
@@ -254,11 +254,10 @@ const styles = {
       display: "flex",
       padding: "15px",
       alignItems: "center",
-      justifyContent: ["flex-start", null, null, null, null, "center"],
+      justifyContent: ["center", null, null, null, null, "center"],
       fontSize: [1, null, 2, null, "18px"],
 
       lineHeight: [2.56],
-      // backgroundColor: "primary",
     },
   },
 };
