@@ -12,31 +12,31 @@ import { useRouter } from "next/router";
 
 const SERVICES_DATA = [
   {
-    id : 1,
+    id: 1,
     icon: icon1,
     title: "Software Development",
     text: "",
   },
   {
-    id : 2,
+    id: 2,
     icon: icon2,
     title: "Database Development",
     text: "",
   },
   {
-    id : 3,
+    id: 3,
     icon: icon3,
     title: "Software Testing",
     text: "",
   },
   {
-    id : 4,
+    id: 4,
     icon: icon4,
     title: "Mobile App Development",
     text: "",
   },
   {
-    id : 5,
+    id: 5,
     icon: icon5,
     title: "Technology Consultancy",
     text: "",
@@ -44,7 +44,7 @@ const SERVICES_DATA = [
 ];
 
 const Services = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Box sx={styles.services}>
       <Container>
@@ -80,10 +80,23 @@ const Services = () => {
             >
               <Image src={service.icon} alt="" />
               {/* <Heading as="h3">{service.title}</Heading> */}
-              <Link sx={styles.links} path={"/services/" + service.id} key={service.key}>
+              <Link
+                sx={styles.links}
+                path={"/services/" + service.id}
+                key={service.key}
+              >
                 {service.title}
               </Link>
-              <Button onClick={() => router.push("/services/"+service.id)} as="p" variant="primary">
+              <Button
+                onClick={() =>
+                  router.push({
+                    pathname: "/services/" + service.id,
+                    scroll: false,
+                  })
+                }
+                as="p"
+                variant="primary"
+              >
                 Read More
               </Button>
             </Box>

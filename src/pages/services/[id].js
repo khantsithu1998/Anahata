@@ -167,7 +167,7 @@ const Details = (content) => {
               ))}
             </Box>
           </Box>
-          <Box>
+          <Box sx={styles.service_list_box}>
             <Box as="ul" sx={styles.service_list}>
               {SERVICES_DETAILS_DATA.map((service) => (
                 <Text
@@ -247,9 +247,12 @@ const styles = {
       },
     },
   },
-  service_list: {
+  service_list_box : {
     ml: [null, null, null, "100px"],
     mt: ["60px", null, null, "100px"],
+  },
+  service_list: {
+   
     li: {
       display: "flex",
       padding: "15px",

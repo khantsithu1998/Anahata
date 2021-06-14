@@ -30,7 +30,7 @@ export default function Header({ className }) {
           </Flex>
 
           <Link
-            path="/"
+            path="/contact-us"
             ml={2}
             label="Contact Us"
             sx={styles.headerBtn}
