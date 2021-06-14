@@ -11,10 +11,10 @@ import {
   Button,
   Message,
   Spinner,
-  Alert
+  Alert,
 } from "theme-ui";
 import image1 from "assets/contact-us.svg";
-import {  useState } from "react";
+import { useState } from "react";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -75,7 +75,13 @@ const ContactUs = () => {
                       setName(e.target.value);
                     }}
                   />
-                  {emailAlertVisible == true ? <Alert sx={{backgroundColor : "red"}}>Email Address is invalid!</Alert> : ""}
+                  {emailAlertVisible == true ? (
+                    <Alert sx={{ backgroundColor: "red" }}>
+                      Email Address is invalid!
+                    </Alert>
+                  ) : (
+                    ""
+                  )}
                   <Label htmlFor="email">Email</Label>
                   <Input
                     name="email"
@@ -83,13 +89,14 @@ const ContactUs = () => {
                     mb={3}
                     type="email"
                     onChange={(e) => {
-                      
-                      let pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-                      if(pattern.test(e.target.value)){
+                      let pattern = new RegExp(
+                        /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+                      );
+                      if (pattern.test(e.target.value)) {
                         setEmail(e.target.value);
                         setEmailAlertVisible(false);
-                      }else{
-                        setEmailAlertVisible(true)
+                      } else {
+                        setEmailAlertVisible(true);
                       }
                     }}
                   />
@@ -106,8 +113,9 @@ const ContactUs = () => {
                   />
 
                   <Button
+                  sx={{pl : ["50px"],pr: ["50px"],backgroundColor : "primary"}}
                     onClick={(e) => {
-                      setSpinnerVisible(true)
+                      setSpinnerVisible(true);
                       handleSubmit(e);
                     }}
                   >

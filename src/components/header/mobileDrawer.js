@@ -1,41 +1,43 @@
-import React, { useContext } from 'react';
-import { Button, Box, Heading } from 'theme-ui';
-import { Scrollbars } from 'react-custom-scrollbars';
-import Drawer from 'components/drawer';
-import { DrawerContext } from 'contexts/drawer/drawer.context';
-import { IoMdClose, IoMdMenu } from 'react-icons/io';
-import { Link } from 'components/link';
-import { Facebook, Twitter, Github, Dribbble } from 'components/customIcon';
-import menuItems from './header.data';
-import Logo from 'components/logo';
-import LogoDark from 'assets/logo.png';
+import React, { useContext } from "react";
+import { Button, Box, Heading } from "theme-ui";
+import { Scrollbars } from "react-custom-scrollbars";
+import Drawer from "components/drawer";
+import { useRouter } from "next/router";
+import { DrawerContext } from "contexts/drawer/drawer.context";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
+import { Link } from "components/link";
+import { Facebook, Twitter, Github, Dribbble } from "components/customIcon";
+import menuItems from "./header.data";
+import Logo from "components/logo";
+import LogoDark from "assets/logo.png";
 
 const social = [
   {
-    path: '/',
+    path: "/",
     icon: <Facebook />,
   },
   {
-    path: '/',
+    path: "/",
     icon: <Twitter />,
   },
   {
-    path: '/',
+    path: "/",
     icon: <Github />,
   },
   {
-    path: '/',
+    path: "/",
     icon: <Dribbble />,
   },
 ];
 
 const MobileDrawer = () => {
+  const router = useRouter();
   const { state, dispatch } = useContext(DrawerContext);
 
   // Toggle drawer
   const toggleHandler = React.useCallback(() => {
     dispatch({
-      type: 'TOGGLE',
+      type: "TOGGLE",
     });
   }, [dispatch]);
 
@@ -56,23 +58,23 @@ const MobileDrawer = () => {
       <Scrollbars autoHide>
         <Box sx={styles.content}>
           <Logo src={LogoDark} />
-          <Heading as="h3">
-          Anahata Consultancy Co., Ltd.
-          </Heading>
+          <Heading as="h3">Anahata Consultancy Co., Ltd.</Heading>
           <Box sx={styles.menu}>
-            {menuItems.map(({ id , path, label }, i) => (
-              <Link
-                activeClass="active"
-                path={path}
-                key={id}
-              >
+            {menuItems.map(({ id, path, label }, i) => (
+              <Link activeClass="active" path={path} key={id}>
                 {label}
               </Link>
             ))}
           </Box>
 
           <Box sx={styles.menuFooter}>
-            <Button variant="primary" sx={styles.button}>
+            <Button
+              onClick={() => {
+                router.push("/contact-us");
+              }}
+              variant="primary"
+              sx={styles.button}
+            >
               Contact Us
             </Button>
           </Box>
@@ -84,79 +86,79 @@ const MobileDrawer = () => {
 
 const styles = {
   handler: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexShrink: '0',
-    width: '26px',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: "0",
+    width: "26px",
 
-    '@media screen and (min-width: 960px)': {
-      display: 'none',
+    "@media screen and (min-width: 960px)": {
+      display: "none",
     },
   },
 
   drawer: {
-    width: '100%',
-    height: '100%',
-    background: '#fff',
+    width: "100%",
+    height: "100%",
+    background: "#fff",
   },
 
   close: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'absolute',
-    top: '30px',
-    right: '30px',
-    zIndex: '1',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    top: "30px",
+    right: "30px",
+    zIndex: "1",
   },
 
   content: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    pt: '30px',
-    pb: '40px',
-    px: '30px',
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    pt: "30px",
+    pb: "40px",
+    px: "30px",
   },
 
   menu: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    marginTop: '30px',
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "30px",
 
     a: {
-      fontSize: '16px',
-      fontWeight: '400',
-      color: 'black',
-      py: '5px',
-      cursor: 'pointer',
+      fontSize: "16px",
+      fontWeight: "400",
+      color: "black",
+      py: "5px",
+      cursor: "pointer",
     },
   },
 
   menuFooter: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    mt: 'auto',
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    mt: "auto",
   },
 
   button: {
-    fontSize: '15px',
-    fw: '700',
-    height: '48px',
-    borderRadius: '3px',
-    cursor: 'pointer',
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    py: '0',
-    backgroundColor: 'primary',
-    color: '#fff',
+    fontSize: "15px",
+    fw: "700",
+    height: "48px",
+    borderRadius: "3px",
+    cursor: "pointer",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    py: "0",
+    backgroundColor: "primary",
+    color: "#fff",
   },
 };
 
