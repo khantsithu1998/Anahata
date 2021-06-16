@@ -45,7 +45,7 @@ const FAQ = () => {
           This is true that we charge lower for the same quality jobs done in
           the US or Europe. However, this is not done by a team with amateur
           members, nor by developing substandard software. We operate from
-          Bangladesh, where living costs are lower; and the primary reason is
+          Myanmar, where living costs are lower; and the primary reason is
           that we have our processes, templates, software libraries ready for
           work which gives us the advantage to develop quality software by
           properly utilizing resources.
