@@ -4,6 +4,7 @@ import {
   Image,
   Heading,
   Text,
+  Flex,
   Grid,
   Label,
   Textarea,
@@ -22,6 +23,7 @@ const ContactUs = () => {
   const [emailAlertVisible, setEmailAlertVisible] = useState(false);
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitBtnEnalbed, setSubmitBtnEnabled] = useState(false);
   const [spinnerVisible, setSpinnerVisible] = useState(false);
 
   const handleSubmit = (e) => {
@@ -60,60 +62,61 @@ const ContactUs = () => {
             <Image src={image1} />
           </Box>
           <Box sx={styles.content}>
-            {spinnerVisible == true ? (
-              <Spinner />
-            ) : (
-              <Box sx={styles.titleBox}>
-                <Heading as="h3">Contact Us</Heading>
-                <Box as="form" onSubmit={(e) => e.preventDefault()}>
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    name="name"
-                    id="name"
-                    mb={3}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                  />
-                  {emailAlertVisible == true ? (
-                    <Alert sx={{ backgroundColor: "red" }}>
-                      Email Address is invalid!
-                    </Alert>
-                  ) : (
-                    ""
-                  )}
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    name="email"
-                    id="email"
-                    mb={3}
-                    type="email"
-                    onChange={(e) => {
-                      let pattern = new RegExp(
-                        /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
-                      );
-                      if (pattern.test(e.target.value)) {
-                        setEmail(e.target.value);
-                        setEmailAlertVisible(false);
-                      } else {
-                        setEmailAlertVisible(true);
-                      }
-                    }}
-                  />
+            <Box sx={styles.titleBox}>
+              <Heading as="h3">Contact Us</Heading>
+              <Box as="form" onSubmit={(e) => e.preventDefault()}>
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  name="name"
+                  id="name"
+                  mb={3}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+                {emailAlertVisible == true ? (
+                  <Alert sx={{ backgroundColor: "red" }}>
+                    Email Address is invalid!
+                  </Alert>
+                ) : (
+                  ""
+                )}
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  name="email"
+                  id="email"
+                  mb={3}
+                  type="email"
+                  onChange={(e) => {
+                    let pattern = new RegExp(
+                      /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+                    );
+                    if (pattern.test(e.target.value)) {
+                      setEmail(e.target.value);
+                      setEmailAlertVisible(false);
+                    } else {
+                      setEmailAlertVisible(true);
+                    }
+                  }}
+                />
 
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    name="message"
-                    id="message"
-                    rows={6}
-                    mb={3}
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                  />
-
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  name="message"
+                  id="message"
+                  rows={6}
+                  mb={3}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                />
+                {spinnerVisible? <Spinner></Spinner> : name != "" && email != "" && message != "" ? (
                   <Button
-                  sx={{pl : ["50px"],pr: ["50px"],backgroundColor : "primary"}}
+                    sx={{
+                      pl: ["50px"],
+                      pr: ["50px"],
+                      backgroundColor: "primary",
+                    }}
                     onClick={(e) => {
                       setSpinnerVisible(true);
                       handleSubmit(e);
@@ -121,17 +124,30 @@ const ContactUs = () => {
                   >
                     Submit
                   </Button>
+                ) : (
+                  <Button
+                    sx={{
+                      pl: ["50px"],
+                      pr: ["50px"],
+                      backgroundColor: "grey",
+                      "&:hover": {
+                        bg: "grey",
+                      },
+                    }}
+                  >
+                    Submit
+                  </Button>
+                )}
 
-                  {submitted == true ? (
-                    <Message sx={styles.message}>
-                      Email has been sent successfully
-                    </Message>
-                  ) : (
-                    <div></div>
-                  )}
-                </Box>
+                {submitted == true ? (
+                  <Message sx={styles.message}>
+                    Email has been sent successfully
+                  </Message>
+                ) : (
+                  <div></div>
+                )}
               </Box>
-            )}
+            </Box>
           </Box>
         </Grid>
       </Container>
